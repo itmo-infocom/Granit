@@ -1,0 +1,3 @@
+#/bin/sh
+
+/data/mirrors/bin/get.sh
