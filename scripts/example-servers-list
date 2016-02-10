@@ -1,0 +1,13 @@
+# this is the list of servers to be the members of ceph cluster
+osd1.pnpi.spb.ru
+10.10.1.12
+osd3.pnpi.spb.ru
+osd4.pnpi.spb.ru
+osd5.pnpi.spb.ru
+ceph-client.pnpi.spb.ru
+ceph-admin.pnpi.spb.ru
+ceph-adm2.naulinux.ru
+osd21.naulinux.ru
+osd22.naulinux.ru
+osd23.naulinux.ru
+osd24.naulinux.ru
