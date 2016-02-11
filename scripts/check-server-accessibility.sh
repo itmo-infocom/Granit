@@ -25,7 +25,11 @@
 #  Author: A. Oreshkin. email: anatoly.oreshkin@gmail.com       |
 #---------------------------------------------------------------+
 # History of changes:                                           |
-#                                                               |
+# A. Oreshkin 11.02.2016                                        |
+# change                                                        |
+# printenv | sed 's/^/export /;s/=/=\"/;s/$/\"/' > /tmp/env_file|
+# for                                                           |
+# echo "export RC=${RC}" > /tmp/env_file                        |                                                              |
 #---------------------------------------------------------------+
 
 export LANG=C
@@ -105,8 +109,8 @@ done
 END
 
 # save export RC into /tmp/env_file
-printenv | sed 's/^/export /;s/=/=\"/;s/$/\"/' > /tmp/env_file
 
+echo "export RC=${RC}" > /tmp/env_file
 ) 2>& 1 | tee ${LOG_FILE}
 
 . /tmp/env_file
