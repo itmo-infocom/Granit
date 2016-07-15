@@ -13,7 +13,7 @@ Files with extension .sql contain PostgreSQL commands.
 
 - To create a specific database table  run script 
 
-create-table-db-vpkshd.sh <table_name> create-<table_name>-vpkshd.sql
+create-table-db-vpkshd.sh 'table_name' create-'table_name'-vpkshd.sql
 
  
 - To create all database tables run script
@@ -23,7 +23,7 @@ create-all-tables-vpkshd.sh
 
 - To delete specific database table run script
 
-delete-table-db-vpkshd.sh <table_name>
+delete-table-db-vpkshd.sh 'table_name'
 
 - To delete all database tables run script
 
@@ -41,15 +41,15 @@ It is supposed that database 'vpkshd' is already filled with the data.
 
 1. create ovs bridges for public &  cluster ceph networks using a script
 
-create-ceph-bridge-vpkshd.sh  <dc_name>  <server_name>  <server_main_bridge_name> <ceph_bridge_name> <vlan_id> <ip_address/prefix>  
+create-ceph-bridge-vpkshd.sh  'dc_name'  'server_name'  'server_main_bridge_name' 'ceph_bridge_name' 'vlan_id' 'ip_address/prefix'  
 [comments]
 
 This script creates bridges files in /etc/sysconfig/network-scripts directory and fills database 'vpkshd'
  
 It is neccessary to restart network environment on the server to take changes in effect.
 
-2.  create-vhdcephserver-docker-vpkshd.sh  <dc_name> <dc_server_name>  <vhd_name> <vhdcephserver_name>  <vhdcephserver_type> <public_
-bridge> <cluster_bridge> <public_ip/prefix> <cluster_ip/prefix>  <memory> <ncpus> [comments]
+2.  create-vhdcephserver-docker-vpkshd.sh  'dc_name' 'dc_server_name'  'vhd_name' 'vhdcephserver_name'  'vhdcephserver_type' 'public_
+bridge' 'cluster_bridge' 'public_ip/prefix' 'cluster_ip/prefix'  'memory' 'ncpus' [comments]
 
 This script creates startup script for ceph server (mon/osd/mds) docker container in /usr/local/bin directory and modifies database 
 'vpkshd'
